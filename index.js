@@ -404,7 +404,7 @@ app.get("/comic/:newLinks/:nextLinks", (req, resp) => {
       const html = res.data;
       const $ = cheerio.load(html);
       $("img", html).each(function () {
-        const image = $(this).attr("data-ec1");
+        const image = $(this).attr("data-src");
 
         images.push(image);
       });
