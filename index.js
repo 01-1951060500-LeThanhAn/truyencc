@@ -403,7 +403,7 @@ app.get("/comic/:newLinks/:nextLinks", (req, resp) => {
     axios(url).then((res) => {
       const html = res.data;
       const $ = cheerio.load(html);
-      $("img", html).each(function () {
+      $(".server-list img", html).each(function () {
         const image = $(this).attr("data-src");
 
         images.push(image);
